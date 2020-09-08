@@ -82,3 +82,6 @@ class Player(physicalobject.PhysicalObject):
             self.rotation = 270.0
         else:
             self.lives = None
+
+def return_4():
+    return 4
