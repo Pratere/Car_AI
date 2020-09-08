@@ -45,3 +45,6 @@ def makeCircle(numPoints, center, radius):
         y = radius*math.sin(angle) + center[1]
         verts += [x,y]
     return pyglet.graphics.vertex_list(numPoints, ('v2f', verts)), verts
+
+def return_5(x):
+    return 5
