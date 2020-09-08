@@ -3,8 +3,8 @@ from game import resources, load, physicalobject, player, util, model
 from pyglet.window import key
 from shapely.geometry import LineString, Point
 
-window_width = 800
-window_height = 600
+window_width = 800 * 2
+window_height = 600 * 2
 game_window = pyglet.window.Window(window_width, window_height)
 
 main_batch = pyglet.graphics.Batch()
