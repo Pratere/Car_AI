@@ -5,11 +5,6 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 class Agent():
     def __init__(self, player):
-        self.model = Sequential()
-        self.model.add(layers.Dense(10, activation='relu', input_dim=18))
-        self.model.add(layers.Dense(10, activation='relu'))
-        self.model.add(layers.Dense(4, activation='sigmoid'))
-        self.model.compile(loss='mse', optimizer='adam', metrics=['mae'])
         self.y = 0.95
         self.eps = 0.5
         self.decay_factor = 0.9999
@@ -26,6 +21,13 @@ class Agent():
         self.memory = []
         self.previous_acts = []
         self.moves = [0, 0, 0, 0]
+
+    def make_model():
+        self.model = Sequential()
+        self.model.add(layers.Dense(10, activation='relu', input_dim=18))
+        self.model.add(layers.Dense(10, activation='relu'))
+        self.model.add(layers.Dense(4, activation='sigmoid'))
+        self.model.compile(loss='mse', optimizer='adam', metrics=['mae'])
 
     def move(self):
         self.previous_acts = []
